@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prioritising Sustainable Transport</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f8ff; /* LightCyan */
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            max-width: 95%;
+            max-height: 90vh;
+            overflow: auto;
+            position: relative;
+        }
+
+        .left-section {
+            flex: 0 0 40%;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+        .right-section {
+            flex: 0 0 60%;
+            padding-left: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2e8b57; /* SeaGreen */
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .sustainable-transport {
+            margin-bottom: 20px;
+        }
+
+        .st-title {
+            color: #2e8b57;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .st-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .st-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f0e68c; /* Khaki */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        .st-icon img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .st-description {
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .hierarchy-container {
+            width: 80%;
+        }
+
+        .hierarchy-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .next-arrow {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 2em;
+            color: #007bff; /* Blue */
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .next-arrow:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="sustainable-transport">
+                <h2 class="st-title">SUSTAINABLE TRANSPORT <br> FOR BETTER ENVIRONMENT</h2>
+                <div class="st-item">
+                    <div class="st-icon"><img src="https://img.icons8.com/color/48/000000/bus.png" alt="Public Transit"></div>
+                    <div class="st-description">
+                        <strong>PUBLIC TRANSIT</strong><br>
+                        Public transportation systems, such as buses, trams, subways, and commuter trains, offer energy-efficient and cost-effective alternatives to personal vehicles, reducing traffic congestion and emissions.
+                    </div>
+                </div>
+                <div class="st-item">
+                    <div class="st-icon"><img src="https://img.icons8.com/color/48/000000/bicycle.png" alt="Cycling"></div>
+                    <div class="st-description">
+                        <strong>CYCLING</strong><br>
+                        Developing dedicated bike lanes and bike-sharing programs to encourage cycling as a pollution-free and healthy mode of transportation.
+                    </div>
+                </div>
+                <div class="st-item">
+                    <div class="st-icon"><img src="https://img.icons8.com/color/48/000000/walking.png" alt="Walking"></div>
+                    <div class="st-description">
+                        <strong>WALKING</strong><br>
+                        Designing urban environments that prioritize pedestrian-friendly infrastructure, making it safer and convenient to walk.
+                    </div>
+                </div>
+                <div class="st-item">
+                    <div class="st-icon"><img src="https://img.icons8.com/color/48/000000/electric-car.png" alt="Electric Vehicles"></div>
+                    <div class="st-description">
+                        <strong>ELECTRIC VEHICLES</strong><br>
+                        Promoting the adoption of electric vehicles, which produce zero tailpipe emissions and contribute to cleaner air and reduced fossil fuels.
+                    </div>
+                </div>
+                <div class="st-item">
+                    <div class="st-icon"><img src="https://img.icons8.com/color/48/000000/carpool.png" alt="Carpooling"></div>
+                    <div class="st-description">
+                        <strong>CARPOOLING</strong><br>
+                        The activity of a group of people travelling together in a car. Encouraging carpooling and ridesharing to reduce the number of vehicles on the road, lowering congestion and emissions.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <h1>Prioritising Sustainable Transport</h1>
+            <div class="hierarchy-container">
+                <img class="hierarchy-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwAAAAK+CAYAAACf5+1SAAAACXBIWXMAAA9lAAAPYQG1xy7QAAAgABJREFUeF7s3U+oXlUYwPH/99737P2/1/3b7k2b7sR2w3Z08v57b3v37v377v2Z7f/37/3795N77977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977977

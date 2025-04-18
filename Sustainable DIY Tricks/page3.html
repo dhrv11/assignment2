@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Hierarchy</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+        }
+
+        .hierarchy {
+            width: 400px;
+            position: relative;
+            text-align: right;
+        }
+
+        .level {
+            position: relative;
+            height: 80px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+        .level-text {
+            position: absolute;
+            right: -110px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .level-1 {
+            background-color: #8fbc8f; /* Light sea green */
+        }
+
+        .level-2 {
+            background-color: #98fb98; /* Pale green */
+        }
+
+        .level-3 {
+            background-color: #b0e0e6; /* Powder blue */
+        }
+
+        .level-4 {
+            background-color: #add8e6; /* Light blue */
+        }
+
+        .level-5 {
+            background-color: #87ceeb; /* Sky blue */
+        }
+
+        .level-6 {
+            background-color: #6495ed; /* Cornflower blue */
+        }
+
+        .level-1::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz3YAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AOAAQAAAABAAABOAAAAAAyC+jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVRIS+3UMQoCMQwE0d8/0Y1gYhU8xY2QY8U58d4/1s45s3eS7l7l3uXf5d7l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5d/l3+Xf5
